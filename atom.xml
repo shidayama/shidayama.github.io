@@ -5,7 +5,52 @@
 <author>shidayama</author>
 <generator uri="https://github.com/Songmu/p5-Riji" version="0.1.3">Perl Riji</generator>
 <id>tag:shidayama.github.io,2014-12-21:</id>
-<updated>2014-12-22T01:55:24+09:00</updated>
+<updated>2014-12-23T01:33:58+09:00</updated>
+<entry>
+<title type="text">CartonによるPerlモジュールの管理方法</title>
+<link href="http://shidayama.github.io/entry/2014-12-23-01.html" />
+<author>
+<name>shidayama</name>
+</author>
+<content><![CDATA[<h1 id="toc_1936154996">CartonによるPerlモジュールの管理方法</h1>
+
+<p>とりあえず基本的な部分だけ。</p>
+
+<h2 id="toc_1936154997">cpanfile作成</h2>
+
+<pre><code>% cat &gt; cpanfile  
+requires &#39;&lt;Perlモジュール名&gt;&#39;;  
+</code></pre>
+
+<p><code>requires &#39;&lt;Perlモジュール名&gt;&#39;, &#39;&lt;バージョン&gt;&#39;;</code>と書くことでバージョンの指定も可能。</p>
+
+<h2 id="toc_1936154998">Perlモジュールインストール</h2>
+
+<p>cpanfile.snapshotが追加される。</p>
+
+<pre><code>% cpan install
+</code></pre>
+
+<p><code>--deployment</code>フラグを付けると、利用可能なモジュールとバージョンのみをインストールする。</p>
+
+<h2 id="toc_1936154999">PerlモジュールをGit管理下より外す</h2>
+
+<p>local/ 以下にCarton管理下のモジュールが設置される為、これは管理から外す。</p>
+
+<pre><code>% echo local/ &gt;&gt; .gitignore
+</code></pre>
+
+<h2 id="toc_1936155000">Perlモジュールを使用する</h2>
+
+<pre><code>% carton exec &lt;Perlモジュール名&gt;
+</code></pre>
+
+<p>エイリアスで<code>carton exec</code>を<code>ce</code>等にすると楽。</p>
+]]></content>
+<id>tag:shidayama.github.io,2014-12-23:entry-2014-12-23-01.html</id>
+<published>2014-12-23T33:33:58+0900</published>
+<updated>2014-12-23T01:33:58+09:00</updated>
+</entry>
 <entry>
 <title type="text">メモ用にBlog開設</title>
 <link href="http://shidayama.github.io/entry/2014-12-22-01.html" />
