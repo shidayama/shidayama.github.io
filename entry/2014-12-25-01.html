@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="http://shidayama.github.io/static/css/github.css" type="text/css" charset="utf-8">
   <link rel="shortcut icon" href="http://shidayama.github.io/favicon.ico">
   <title>
-    ShidaLog
+    Markdown記法 | ShidaLog
+
   </title>
 </head>
 <body>
@@ -16,20 +17,26 @@
   </header>
   <section>
 <nav>
-  <ul>
-    <li><a href="http://shidayama.github.io/archives.html">Archives</a></li>
+  <ul class="paginate">
+    <li class="prev">prev: <a href="http://shidayama.github.io/entry/2014-12-23-01.html">CartonによるPerlモジュールの管理方法</a>
   </ul>
 </nav>
+
 <article>
-  <h1><a href="http://shidayama.github.io/entry/2014-12-25-01.html">Markdown記法</a></h1>
-  <time pubdate>2014-12-25 01:36</time>
-  
+  <aside class="tags">
+    <h1 class="tags">tags</h1>
+    <ul class="tags">
+      <li><a href="http://shidayama.github.io/tag/markdown.html">markdown</a></li>
+    </ul>
+  </aside>
+  <div class="entry">
+    <h1 id="toc_1936154996">Markdown記法</h1>
 
 <p>よく使う記法のみ抜粋。</p>
 
-<h2>文字装飾</h2>
+<h2 id="toc_1936154997">文字装飾</h2>
 
-<h3>見出し</h3>
+<h3 id="toc_1936154998">見出し</h3>
 
 <p>文頭に「#」で見出し。</p>
 
@@ -41,7 +48,7 @@
   ###### h6
 </code></pre>
 
-<h3>強調</h3>
+<h3 id="toc_1936154999">強調</h3>
 
 <p>「__」か「**」で囲むと太字。</p>
 
@@ -53,16 +60,16 @@ __太字__
 _斜体_
 </code></pre>
 
-<h3>打ち消し線</h3>
+<h3 id="toc_1936155000">打ち消し線</h3>
 
 <p>「~~」で囲むと打ち消し線。</p>
 
 <pre><code>~~打ち消し線~~
 </code></pre>
 
-<h2>リスト</h2>
+<h2 id="toc_1936155001">リスト</h2>
 
-<h3>Disc型</h3>
+<h3 id="toc_1936155002">Disc型</h3>
 
 <p>「-」「+」「*」のいずれかでDisc型リスト。</p>
 
@@ -71,7 +78,7 @@ _斜体_
 * リスト
 </code></pre>
 
-<h3>Decimal型</h3>
+<h3 id="toc_1936155003">Decimal型</h3>
 
 <p>「数値.」でDecimal型リスト。</p>
 
@@ -79,10 +86,10 @@ _斜体_
 2. リスト
 </code></pre>
 
-<h2>コード</h2>
+<h2 id="toc_1936155004">コード</h2>
 
-<p>半角スペース4つでコードブロック。<br>
-あるいは段落を「```」で囲む。<br>
+<p>半角スペース4つでコードブロック。<br/>
+あるいは段落を「```」で囲む。<br/>
 文中に記述するならば「`」でその箇所を囲む。</p>
 
 <pre><code>```
@@ -92,28 +99,28 @@ _斜体_
 文中に`コード`を含める場合
 </code></pre>
 
-<h2>引用</h2>
+<h2 id="toc_1936155005">引用</h2>
 
 <p>文頭に「&gt;」で引用。</p>
 
 <pre><code>&gt; 引用文
 </code></pre>
 
-<h2>リンク</h2>
+<h2 id="toc_1936155006">リンク</h2>
 
-<h3>タイトルあり</h3>
+<h3 id="toc_1936155007">タイトルあり</h3>
 
 <pre><code>[リンクテキスト](URL &quot;タイトル&quot;)
 </code></pre>
 
-<h3>タイトル無し</h3>
+<h3 id="toc_1936155008">タイトル無し</h3>
 
 <pre><code>[リンクテキスト](URL)
 </code></pre>
 
-<h2>水平線</h2>
+<h2 id="toc_1936155009">水平線</h2>
 
-<p>以下のパターンで水平線が表示される。<br>
+<p>以下のパターンで水平線が表示される。<br/>
 （他にもパターンあり）</p>
 
 <pre><code>***
@@ -121,7 +128,7 @@ _斜体_
 - - -
 </code></pre>
 
-<h2>テーブル</h2>
+<h2 id="toc_1936155010">テーブル</h2>
 
 <p>以下のパターンでテーブル表示。</p>
 
@@ -131,69 +138,25 @@ _斜体_
 | a    |   b    |     c |
 </code></pre>
 
-<h2>その他</h2>
+<h2 id="toc_1936155011">その他</h2>
 
 <ul>
 <li>文末に半角スペース2つで段落内改行。</li>
 <li>バックスラッシュ「\」を記号の前に記述すると、markdown記法を無効化できる。</li>
 </ul>
 
+  </div>
+  <dl class="meta">
+      <dt class="author">created by</dt>
+      <dd class="author">shidayama</dd>
+      <dt class="time">created at</dt>
+      <dd class="time"><time>2014-12-25 01:36</time></dd>
+      <dt class="author">last modified by</dt>
+      <dd class="author">shidayama</dd>
+      <dt class="time">last modified at</dt>
+      <dd class="time">2014-12-25 01:36</dd>
+  </dl>
 </article>
-<article>
-  <h1><a href="http://shidayama.github.io/entry/2014-12-23-01.html">CartonによるPerlモジュールの管理方法</a></h1>
-  <time pubdate>2014-12-23 01:33</time>
-  
-
-<p>とりあえず基本的な部分だけ。</p>
-
-<h2>cpanfile作成</h2>
-
-<pre><code>% cat &gt; cpanfile  
-requires &#39;&lt;Perlモジュール名&gt;&#39;;  
-</code></pre>
-
-<p><code>requires &#39;&lt;Perlモジュール名&gt;&#39;, &#39;&lt;バージョン&gt;&#39;;</code>と書くことでバージョンの指定も可能。</p>
-
-<h2>Perlモジュールインストール</h2>
-
-<p>cpanfile.snapshotが追加される。</p>
-
-<pre><code>% cpan install
-</code></pre>
-
-<p><code>--deployment</code>フラグを付けると、利用可能なモジュールとバージョンのみをインストールする。</p>
-
-<h2>PerlモジュールをGit管理下より外す</h2>
-
-<p>local/ 以下にCarton管理下のモジュールが設置される為、これは管理から外す。</p>
-
-<pre><code>% echo local/ &gt;&gt; .gitignore
-</code></pre>
-
-<h2>Perlモジュールを使用する</h2>
-
-<pre><code>% carton exec &lt;Perlモジュール名&gt;
-</code></pre>
-
-<p>エイリアスで<code>carton exec</code>を<code>ce</code>等にすると楽。</p>
-
-</article>
-<article>
-  <h1><a href="http://shidayama.github.io/entry/2014-12-22-01.html">メモ用にBlog開設</a></h1>
-  <time pubdate>2014-12-22 01:55</time>
-  
-
-<p>雑多にTips等を書き込んでいく予定。</p>
-
-</article>
-<aside class="tags">
-  <h1>Tags</h1>
-  <ul class="tags">
-  <li><a href="http://shidayama.github.io/tag/perl.html">perl(2)</a></li>
-  <li><a href="http://shidayama.github.io/tag/carton.html">carton(1)</a></li>
-  <li><a href="http://shidayama.github.io/tag/markdown.html">markdown(1)</a></li>
-  </ul>
-</aside>
   </section>
   <footer>
     <p>author: shidayama</p>

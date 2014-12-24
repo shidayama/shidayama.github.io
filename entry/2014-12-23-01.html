@@ -19,6 +19,7 @@
 <nav>
   <ul class="paginate">
     <li class="prev">prev: <a href="http://shidayama.github.io/entry/2014-12-22-01.html">メモ用にBlog開設</a>
+    <li class="next">next: <a href="http://shidayama.github.io/entry/2014-12-25-01.html">Markdown記法</a>
   </ul>
 </nav>
 
@@ -31,11 +32,11 @@
     </ul>
   </aside>
   <div class="entry">
-    <h1>CartonによるPerlモジュールの管理方法</h1>
+    <h1 id="toc_1936154996">CartonによるPerlモジュールの管理方法</h1>
 
 <p>とりあえず基本的な部分だけ。</p>
 
-<h2>cpanfile作成</h2>
+<h2 id="toc_1936154997">cpanfile作成</h2>
 
 <pre><code>% cat &gt; cpanfile  
 requires &#39;&lt;Perlモジュール名&gt;&#39;;  
@@ -43,7 +44,7 @@ requires &#39;&lt;Perlモジュール名&gt;&#39;;
 
 <p><code>requires &#39;&lt;Perlモジュール名&gt;&#39;, &#39;&lt;バージョン&gt;&#39;;</code>と書くことでバージョンの指定も可能。</p>
 
-<h2>Perlモジュールインストール</h2>
+<h2 id="toc_1936154998">Perlモジュールインストール</h2>
 
 <p>cpanfile.snapshotが追加される。</p>
 
@@ -52,14 +53,14 @@ requires &#39;&lt;Perlモジュール名&gt;&#39;;
 
 <p><code>--deployment</code>フラグを付けると、利用可能なモジュールとバージョンのみをインストールする。</p>
 
-<h2>PerlモジュールをGit管理下より外す</h2>
+<h2 id="toc_1936154999">PerlモジュールをGit管理下より外す</h2>
 
 <p>local/ 以下にCarton管理下のモジュールが設置される為、これは管理から外す。</p>
 
 <pre><code>% echo local/ &gt;&gt; .gitignore
 </code></pre>
 
-<h2>Perlモジュールを使用する</h2>
+<h2 id="toc_1936155000">Perlモジュールを使用する</h2>
 
 <pre><code>% carton exec &lt;Perlモジュール名&gt;
 </code></pre>

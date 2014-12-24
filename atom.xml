@@ -5,18 +5,143 @@
 <author>shidayama</author>
 <generator uri="https://github.com/Songmu/p5-Riji" version="0.1.3">Perl Riji</generator>
 <id>tag:shidayama.github.io,2014-12-21:</id>
-<updated>2014-12-23T01:33:58+09:00</updated>
+<updated>2014-12-25T01:36:33+09:00</updated>
+<entry>
+<title type="text">Markdown記法</title>
+<link href="http://shidayama.github.io/entry/2014-12-25-01.html" />
+<author>
+<name>shidayama</name>
+</author>
+<content><![CDATA[<h1>Markdown記法</h1>
+
+<p>よく使う記法のみ抜粋。</p>
+
+<h2>文字装飾</h2>
+
+<h3>見出し</h3>
+
+<p>文頭に「#」で見出し。</p>
+
+<pre><code>  # h1
+  ## h2
+  ### h3
+  #### h4
+  ##### h5
+  ###### h6
+</code></pre>
+
+<h3>強調</h3>
+
+<p>「__」か「**」で囲むと太字。</p>
+
+<p>「_」か「*」で囲むと斜体。</p>
+
+<pre><code>**太字**
+__太字__
+*斜体*
+_斜体_
+</code></pre>
+
+<h3>打ち消し線</h3>
+
+<p>「~~」で囲むと打ち消し線。</p>
+
+<pre><code>~~打ち消し線~~
+</code></pre>
+
+<h2>リスト</h2>
+
+<h3>Disc型</h3>
+
+<p>「-」「+」「*」のいずれかでDisc型リスト。</p>
+
+<pre><code>- リスト
++ リスト
+* リスト
+</code></pre>
+
+<h3>Decimal型</h3>
+
+<p>「数値.」でDecimal型リスト。</p>
+
+<pre><code>1. リスト
+2. リスト
+</code></pre>
+
+<h2>コード</h2>
+
+<p>半角スペース4つでコードブロック。<br>
+あるいは段落を「```」で囲む。<br>
+文中に記述するならば「`」でその箇所を囲む。</p>
+
+<pre><code>```
+コードブロック
+```
+
+文中に`コード`を含める場合
+</code></pre>
+
+<h2>引用</h2>
+
+<p>文頭に「&gt;」で引用。</p>
+
+<pre><code>&gt; 引用文
+</code></pre>
+
+<h2>リンク</h2>
+
+<h3>タイトルあり</h3>
+
+<pre><code>[リンクテキスト](URL &quot;タイトル&quot;)
+</code></pre>
+
+<h3>タイトル無し</h3>
+
+<pre><code>[リンクテキスト](URL)
+</code></pre>
+
+<h2>水平線</h2>
+
+<p>以下のパターンで水平線が表示される。<br>
+（他にもパターンあり）</p>
+
+<pre><code>***
+* * *
+- - -
+</code></pre>
+
+<h2>テーブル</h2>
+
+<p>以下のパターンでテーブル表示。</p>
+
+<pre><code>| left | center | right |
+|:-----|--------|-------|
+| 1    |   2    |     3 |
+| a    |   b    |     c |
+</code></pre>
+
+<h2>その他</h2>
+
+<ul>
+<li>文末に半角スペース2つで段落内改行。</li>
+<li>バックスラッシュ「\」を記号の前に記述すると、markdown記法を無効化できる。</li>
+</ul>
+]]></content>
+<id>tag:shidayama.github.io,2014-12-25:entry-2014-12-25-01.html</id>
+<published>2014-12-25T36:36:33+0900</published>
+<updated>2014-12-25T01:36:33+09:00</updated>
+</entry>
 <entry>
 <title type="text">CartonによるPerlモジュールの管理方法</title>
 <link href="http://shidayama.github.io/entry/2014-12-23-01.html" />
 <author>
 <name>shidayama</name>
 </author>
-<content><![CDATA[<h1 id="toc_1936154996">CartonによるPerlモジュールの管理方法</h1>
+<content><![CDATA[<h1>CartonによるPerlモジュールの管理方法</h1>
 
 <p>とりあえず基本的な部分だけ。</p>
 
-<h2 id="toc_1936154997">cpanfile作成</h2>
+<h2>cpanfile作成</h2>
 
 <pre><code>% cat &gt; cpanfile  
 requires &#39;&lt;Perlモジュール名&gt;&#39;;  
@@ -24,7 +149,7 @@ requires &#39;&lt;Perlモジュール名&gt;&#39;;
 
 <p><code>requires &#39;&lt;Perlモジュール名&gt;&#39;, &#39;&lt;バージョン&gt;&#39;;</code>と書くことでバージョンの指定も可能。</p>
 
-<h2 id="toc_1936154998">Perlモジュールインストール</h2>
+<h2>Perlモジュールインストール</h2>
 
 <p>cpanfile.snapshotが追加される。</p>
 
@@ -33,14 +158,14 @@ requires &#39;&lt;Perlモジュール名&gt;&#39;;
 
 <p><code>--deployment</code>フラグを付けると、利用可能なモジュールとバージョンのみをインストールする。</p>
 
-<h2 id="toc_1936154999">PerlモジュールをGit管理下より外す</h2>
+<h2>PerlモジュールをGit管理下より外す</h2>
 
 <p>local/ 以下にCarton管理下のモジュールが設置される為、これは管理から外す。</p>
 
 <pre><code>% echo local/ &gt;&gt; .gitignore
 </code></pre>
 
-<h2 id="toc_1936155000">Perlモジュールを使用する</h2>
+<h2>Perlモジュールを使用する</h2>
 
 <pre><code>% carton exec &lt;Perlモジュール名&gt;
 </code></pre>
@@ -57,7 +182,7 @@ requires &#39;&lt;Perlモジュール名&gt;&#39;;
 <author>
 <name>shidayama</name>
 </author>
-<content><![CDATA[<h1>メモ用にBlog開設</h1>
+<content><![CDATA[<h1 id="toc_15">メモ用にBlog開設</h1>
 
 <p>雑多にTips等を書き込んでいく予定。</p>
 ]]></content>
