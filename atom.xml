@@ -22,7 +22,7 @@
 
 <p>文頭に「#」で見出し。</p>
 
-<pre><code>  # h1
+<pre><code class="prettyprint">  # h1
   ## h2
   ### h3
   #### h4
@@ -36,7 +36,7 @@
 
 <p>「_」か「*」で囲むと斜体。</p>
 
-<pre><code>**太字**
+<pre><code class="prettyprint">**太字**
 __太字__
 *斜体*
 _斜体_
@@ -46,7 +46,7 @@ _斜体_
 
 <p>「~~」で囲むと打ち消し線。</p>
 
-<pre><code>~~打ち消し線~~
+<pre><code class="prettyprint">~~打ち消し線~~
 </code></pre>
 
 <h2>リスト</h2>
@@ -55,7 +55,7 @@ _斜体_
 
 <p>「-」「+」「*」のいずれかでDisc型リスト。</p>
 
-<pre><code>- リスト
+<pre><code class="prettyprint">- リスト
 + リスト
 * リスト
 </code></pre>
@@ -64,7 +64,7 @@ _斜体_
 
 <p>「数値.」でDecimal型リスト。</p>
 
-<pre><code>1. リスト
+<pre><code class="prettyprint">1. リスト
 2. リスト
 </code></pre>
 
@@ -74,7 +74,7 @@ _斜体_
 あるいは段落を「```」で囲む。<br>
 文中に記述するならば「`」でその箇所を囲む。</p>
 
-<pre><code>```
+<pre><code class="prettyprint">```
 コードブロック
 ```
 
@@ -85,19 +85,19 @@ _斜体_
 
 <p>文頭に「&gt;」で引用。</p>
 
-<pre><code>&gt; 引用文
+<pre><code class="prettyprint">&gt; 引用文
 </code></pre>
 
 <h2>リンク</h2>
 
 <h3>タイトルあり</h3>
 
-<pre><code>[リンクテキスト](URL &quot;タイトル&quot;)
+<pre><code class="prettyprint">[リンクテキスト](URL &quot;タイトル&quot;)
 </code></pre>
 
 <h3>タイトル無し</h3>
 
-<pre><code>[リンクテキスト](URL)
+<pre><code class="prettyprint">[リンクテキスト](URL)
 </code></pre>
 
 <h2>水平線</h2>
@@ -105,7 +105,7 @@ _斜体_
 <p>以下のパターンで水平線が表示される。<br>
 （他にもパターンあり）</p>
 
-<pre><code>***
+<pre><code class="prettyprint">***
 * * *
 - - -
 </code></pre>
@@ -114,7 +114,7 @@ _斜体_
 
 <p>以下のパターンでテーブル表示。</p>
 
-<pre><code>| left | center | right |
+<pre><code class="prettyprint">| left | center | right |
 |:-----|--------|-------|
 | 1    |   2    |     3 |
 | a    |   b    |     c |
@@ -143,34 +143,34 @@ _斜体_
 
 <h2>cpanfile作成</h2>
 
-<pre><code>% cat &gt; cpanfile  
+<pre><code class="prettyprint">% cat &gt; cpanfile  
 requires &#39;&lt;Perlモジュール名&gt;&#39;;  
 </code></pre>
 
-<p><code>requires &#39;&lt;Perlモジュール名&gt;&#39;, &#39;&lt;バージョン&gt;&#39;;</code>と書くことでバージョンの指定も可能。</p>
+<p><code class="prettyprint">requires &#39;&lt;Perlモジュール名&gt;&#39;, &#39;&lt;バージョン&gt;&#39;;</code>と書くことでバージョンの指定も可能。</p>
 
 <h2>Perlモジュールインストール</h2>
 
 <p>cpanfile.snapshotが追加される。</p>
 
-<pre><code>% cpan install
+<pre><code class="prettyprint">% cpan install
 </code></pre>
 
-<p><code>--deployment</code>フラグを付けると、利用可能なモジュールとバージョンのみをインストールする。</p>
+<p><code class="prettyprint">--deployment</code>フラグを付けると、利用可能なモジュールとバージョンのみをインストールする。</p>
 
 <h2>PerlモジュールをGit管理下より外す</h2>
 
 <p>local/ 以下にCarton管理下のモジュールが設置される為、これは管理から外す。</p>
 
-<pre><code>% echo local/ &gt;&gt; .gitignore
+<pre><code class="prettyprint">% echo local/ &gt;&gt; .gitignore
 </code></pre>
 
 <h2>Perlモジュールを使用する</h2>
 
-<pre><code>% carton exec &lt;Perlモジュール名&gt;
+<pre><code class="prettyprint">% carton exec &lt;Perlモジュール名&gt;
 </code></pre>
 
-<p>エイリアスで<code>carton exec</code>を<code>ce</code>等にすると楽。</p>
+<p>エイリアスで<code class="prettyprint">carton exec</code>を<code class="prettyprint">ce</code>等にすると楽。</p>
 ]]></content>
 <id>tag:shidayama.github.io,2014-12-23:entry-2014-12-23-01.html</id>
 <published>2014-12-23T33:33:58+0900</published>
@@ -182,7 +182,7 @@ requires &#39;&lt;Perlモジュール名&gt;&#39;;
 <author>
 <name>shidayama</name>
 </author>
-<content><![CDATA[<h1 id="toc_15">メモ用にBlog開設</h1>
+<content><![CDATA[<h1>メモ用にBlog開設</h1>
 
 <p>雑多にTips等を書き込んでいく予定。</p>
 ]]></content>
